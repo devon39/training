@@ -5,6 +5,10 @@ pragma solidity >=0.8.2 <0.9.0;
 contract Whitelist {
    mapping(address=> bool) whitelist;
    event Authorized(address _address); // Event
+
+   constructor() {
+       whitelist[msg.sender]=true;
+   }
  
     modifier check(){
         require (whitelist[msg.sender]==true, "you are not authorized");
