@@ -8,4 +8,3 @@ contract ERC20Token is ERC20 {
     constructor() ERC20("GuestToGuestToken", "GTG") {
     }
 }
-
